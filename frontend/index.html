@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-heading">
+                PERSONAL FINANCE
+            </p>
+
+            <h1>
+                Track your expenses
+                <span>with ease.</span>
+            </h1>
+
+            <p>
+                Add, manage and keep track of your daily expenses in one place.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="expense-section">
+
+        <div class="form-card">
+
+            <div class="section-heading">
+
+                <p class="small-heading">
+                    EXPENSE TRACKER
+                </p>
+
+                <h2>Add an Expense</h2>
+
+                <p>
+                    Enter your expense details below.
+                </p>
+
+            </div>
+
+
+            <form id="expenseForm">
+
+                <div class="form-group">
+
+                    <label for="amount">
+                        Expense Amount
+                    </label>
+
+                    <input
+                        type="number"
+                        name="amount"
+                        id="amount"
+                        placeholder="Enter amount"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="description">
+                        Description
+                    </label>
+
+                    <input
+                        type="text"
+                        name="description"
+                        id="description"
+                        placeholder="Enter description"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="category">
+                        Category
+                    </label>
+
+                    <select
+                        name="category"
+                        id="category"
+                        required
+                    >
+
+                        <option value="" selected disabled>
+                            Select a Category
+                        </option>
+
+                        <option value="fuel">
+                            Fuel
+                        </option>
+
+                        <option value="food">
+                            Food
+                        </option>
+
+                        <option value="movie">
+                            Movie
+                        </option>
+
+                        <option value="electricity">
+                            Electricity
+                        </option>
+
+                        <option value="others">
+                            Others
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    id="addExpensebtn"
+                    type="submit"
+                >
+                    Add Expense
+                </button>
+
+                <p id="message"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <section class="expenses-section">
+
+        <div class="section-heading">
+
+            <p class="small-heading">
+                EXPENSE HISTORY
+            </p>
+
+            <h2>
+                Your Expenses
+            </h2>
+
+            <p>
+                View all the expenses stored in the database.
+            </p>
+
+        </div>
+
+
+        <div id="expenseList" class="expense-list">
+
+            <div class="loading">
+                Loading expenses...
+            </div>
+
+        </div>
+
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+background: #f4f1eb;
+color: #242424;
+}
+
+/* Hero Section */
+
+.hero {
+min-height: 360px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+text-align: center;
+
+padding: 50px 20px;
+
+background: #20201e;
+
+color: white;
+
+position: relative;
+overflow: hidden;
+
+}
+
+.hero::before {
+content: "";
+
+position: absolute;
+
+width: 450px;
+height: 450px;
+
+border-radius: 50%;
+
+background: #d98b35;
+
+top: -250px;
+right: -120px;
+
+opacity: 0.25;
+
+}
+
+.hero::after {
+content: "";
+
+position: absolute;
+
+width: 300px;
+height: 300px;
+
+border-radius: 50%;
+
+background: #d98b35;
+
+bottom: -180px;
+left: -100px;
+
+opacity: 0.15;
+
+}
+
+.hero-content {
+max-width: 750px;
+
+position: relative;
+
+z-index: 1;
+
+}
+
+.hero .small-heading {
+color: #d98b35;
+}
+
+.hero h1 {
+font-size: 52px;
+
+line-height: 1.15;
+
+margin: 15px 0;
+
+}
+
+.hero h1 span {
+display: block;
+
+color: #d98b35;
+
+}
+
+.hero p {
+font-size: 17px;
+
+color: #c9c5bd;
+
+margin-top: 15px;
+
+}
+
+/* Common Section */
+
+.small-heading {
+font-size: 13px;
+
+font-weight: bold;
+
+letter-spacing: 2px;
+
+color: #c87524;
+
+}
+
+.section-heading {
+text-align: center;
+
+margin-bottom: 35px;
+
+}
+
+.section-heading h2 {
+font-size: 32px;
+
+margin: 8px 0;
+
+}
+
+.section-heading p {
+color: #77736c;
+}
+
+/* Expense Form Section */
+
+.expense-section {
+padding: 70px 20px;
+
+background: #f4f1eb;
+
+}
+
+.form-card {
+max-width: 600px;
+
+margin: auto;
+
+background: #fffdf9;
+
+padding: 40px;
+
+border-radius: 6px;
+
+border: 1px solid #ded8ce;
+
+box-shadow: 0 12px 30px rgba(40, 35, 25, 0.08);
+
+}
+
+.form-group {
+margin-bottom: 22px;
+}
+
+.form-group label {
+display: block;
+
+margin-bottom: 8px;
+
+font-size: 14px;
+
+font-weight: bold;
+
+color: #383631;
+
+}
+
+.form-group input,
+.form-group select {
+width: 100%;
+
+padding: 14px 15px;
+
+border: 1px solid #d5d0c8;
+
+border-radius: 5px;
+
+font-size: 15px;
+
+outline: none;
+
+background: #fdfcf9;
+
+color: #333;
+
+}
+
+.form-group input,
+.form-group select {
+border-color: #d98b35;
+
+box-shadow: 0 0 0 3px rgba(217, 139, 53, 0.12);
+
+}
+
+#addExpensebtn {
+width: 100%;
+
+padding: 15px;
+
+border: none;
+
+border-radius: 5px;
+
+background: #d98b35;
+
+color: white;
+
+font-size: 16px;
+
+font-weight: bold;
+
+cursor: pointer;
+
+transition: 0.2s;
+
+}
+
+#addExpensebtn {
+background: #bd7020;
+}
+
+#message {
+text-align: center;
+
+margin-top: 15px;
+
+font-weight: bold;
+
+}
+
+/* Expenses Section */
+
+.expenses-section {
+padding: 70px 20px;
+
+background: #292825;
+
+color: white;
+
+}
+
+.expenses-section .section-heading h2 {
+color: white;
+}
+
+.expenses-section .section-heading p {
+color: #aaa69e;
+}
+
+.expenses-section .small-heading {
+color: #d98b35;
+}
+
+/* Expense List */
+
+.expense-list {
+max-width: 1050px;
+
+margin: auto;
+
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 20px;
+
+}
+
+.loading,
+.no-expenses {
+grid-column: 1 / -1;
+
+text-align: center;
+
+padding: 35px;
+
+color: #aaa69e;
+
+}
+
+/* Expense Card */
+
+.expense-card {
+background: #fffdf9;
+
+color: #292825;
+
+padding: 25px;
+
+border-radius: 6px;
+
+border-top: 4px solid #d98b35;
+
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+transition: transform 0.2s, box-shadow 0.2s;
+
+}
+
+.expense-card {
+transform: translateY(-4px);
+
+box-shadow: 0 14px 25px rgba(0, 0, 0, 0.2);
+
+}
+
+.expense-card h3 {
+font-size: 25px;
+
+margin-bottom: 12px;
+
+color: #292825;
+
+}
+
+.expense-card p {
+margin-bottom: 10px;
+
+color: #66615a;
+
+line-height: 1.5;
+
+}
+
+.expense-category {
+display: inline-block;
+
+padding: 6px 12px;
+
+border-radius: 3px;
+
+background: #f1dfc8;
+
+color: #9a5c1c;
+
+font-size: 12px;
+
+font-weight: bold;
+
+text-transform: uppercase;
+
+margin-bottom: 15px;
+
+}
+
+/* Buttons */
+
+.expense-buttons {
+display: flex;
+
+gap: 10px;
+
+margin-top: 20px;
+
+}
+
+.delete-button,
+.edit-button {
+flex: 1;
+
+padding: 10px;
+
+border: none;
+
+border-radius: 4px;
+
+color: white;
+
+cursor: pointer;
+
+font-weight: bold;
+
+transition: 0.2s;
+
+}
+
+.delete-button {
+background: #b94a48;
+}
+
+.delete-button {
+background: #963a38;
+}
+
+.edit-button {
+background: #45433f;
+}
+
+.edit-button {
+background: #302f2c;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+.expense-list {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.hero h1 {
+    font-size: 42px;
+}
+
+}
+
+@media (max-width: 550px) {
+
+.expense-list {
+    grid-template-columns: 1fr;
+}
+
+.hero h1 {
+    font-size: 34px;
+}
+
+.form-card {
+    padding: 25px;
+}
+
+}
